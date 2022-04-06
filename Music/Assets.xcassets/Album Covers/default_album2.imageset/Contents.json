@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "8685871_ic_fluent_music_note_filled_icon.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "8685871_ic_fluent_music_note_filled_icon (1).png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "8685871_ic_fluent_music_note_filled_icon (2).png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

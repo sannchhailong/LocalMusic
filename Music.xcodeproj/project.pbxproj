@@ -17,6 +17,7 @@
 		F8252A0F27EB8338008DBA37 /* MainTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8252A0E27EB8338008DBA37 /* MainTabVC.swift */; };
 		F82D325627E89EC9002F4BD8 /* LoadingFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82D325527E89EC9002F4BD8 /* LoadingFooterView.swift */; };
 		F85C681F27EA239A00613796 /* FullscreenPlayerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85C681E27EA239A00613796 /* FullscreenPlayerVC.swift */; };
+		F86F98942908DF4800302976 /* jar_of_heart.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F86F98932908DF4800302976 /* jar_of_heart.mp3 */; };
 		F87B893B27C536EC00913D77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87B893A27C536EC00913D77 /* AppDelegate.swift */; };
 		F87B893D27C536EC00913D77 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87B893C27C536EC00913D77 /* SceneDelegate.swift */; };
 		F87B893F27C536EC00913D77 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87B893E27C536EC00913D77 /* ViewController.swift */; };
@@ -67,6 +68,7 @@
 		F8252A0E27EB8338008DBA37 /* MainTabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabVC.swift; sourceTree = "<group>"; };
 		F82D325527E89EC9002F4BD8 /* LoadingFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingFooterView.swift; sourceTree = "<group>"; };
 		F85C681E27EA239A00613796 /* FullscreenPlayerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullscreenPlayerVC.swift; sourceTree = "<group>"; };
+		F86F98932908DF4800302976 /* jar_of_heart.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = jar_of_heart.mp3; sourceTree = "<group>"; };
 		F87B893727C536EC00913D77 /* Music.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Music.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F87B893A27C536EC00913D77 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F87B893C27C536EC00913D77 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -119,13 +121,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F818511327EE128500947ABB /* view models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "view models";
-			sourceTree = "<group>";
-		};
 		F818511427EE129800947ABB /* components */ = {
 			isa = PBXGroup;
 			children = (
@@ -168,7 +163,7 @@
 		F87B893927C536EC00913D77 /* Music */ = {
 			isa = PBXGroup;
 			children = (
-				F818511327EE128500947ABB /* view models */,
+				F86F98932908DF4800302976 /* jar_of_heart.mp3 */,
 				F8C3BC5527E38C88007B4E49 /* Services */,
 				F8BCC89E27DD9F3E00FDAF5F /* models */,
 				F8BCC86627DD004E00FDAF5F /* extensions */,
@@ -364,6 +359,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F86F98942908DF4800302976 /* jar_of_heart.mp3 in Resources */,
 				F87B894727C536EE00913D77 /* LaunchScreen.storyboard in Resources */,
 				F87B894427C536EE00913D77 /* Assets.xcassets in Resources */,
 			);
@@ -571,7 +567,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -579,6 +575,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.chhailong.Music;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -602,7 +601,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -610,6 +609,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.chhailong.Music;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

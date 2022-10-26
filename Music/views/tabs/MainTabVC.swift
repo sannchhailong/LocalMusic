@@ -61,11 +61,6 @@ class MainTabVC: UITabBarController {
     }()
     
     let playButton: UIButton = {
-        var config = UIButton.Configuration.plain()
-        config.image = UIImage(systemName: "play.fill")
-        config.imagePadding = 8
-        config.setDefaultContentInsets()
-        config.baseBackgroundColor = .clear
         let button = UIButton(image: UIImage(systemName: "play.fill")!)
         button.layer.cornerRadius = 30
         button.clipsToBounds = true
@@ -93,7 +88,9 @@ class MainTabVC: UITabBarController {
         tabContainer.anchor(
             .bottom(view.bottomAnchor, constant: 0),
             .leading(view.leadingAnchor, constant: 0),
-            .trailing(view.trailingAnchor, constant: 0)
+            .trailing(view.trailingAnchor, constant: 0),
+            .bottom(tabBar.topAnchor, constant: 0)
+
         )
         
         tabContainer.addSubview(visualEffectView)
@@ -101,65 +98,56 @@ class MainTabVC: UITabBarController {
         
         
         tabContainer.addSubview(mediaControlView)
-        mediaControlView.anchor(
-            .leading(tabContainer.leadingAnchor, constant: 0),
-            .trailing(tabContainer.trailingAnchor, constant: 0),
-            .top(tabContainer.topAnchor, constant: 0)
-        )
+        mediaControlView.fillSuperview()
+
+//        mediaControlView.anchor(
+//            .leading(tabContainer.leadingAnchor, constant: 0),
+//            .trailing(tabContainer.trailingAnchor, constant: 0),
+//            .top(tabContainer.topAnchor, constant: 0),
+//            .bottom(tabContainer.safeAreaLayoutGuide.bottomAnchor, constant: 0)
+//
+//        )
         
         
-        tabContainer.addSubview(separator)
-        separator.anchor(
-            .leading(tabContainer.leadingAnchor, constant: 0),
-            .trailing(tabContainer.trailingAnchor, constant: 0),
-            .top(mediaControlView.bottomAnchor, constant: 0),
-            .height(0.4)
-        )
+//        tabContainer.addSubview(separator)
+//        separator.anchor(
+//            .leading(tabContainer.leadingAnchor, constant: 0),
+//            .trailing(tabContainer.trailingAnchor, constant: 0),
+//            .top(mediaControlView.bottomAnchor, constant: 0),
+//            .height(0.4)
+//        )
+//
+//        tabContainer.addSubview(itemStackView)
+//        itemStackView.anchor(
+//            .leading(tabContainer.leadingAnchor, constant: 0),
+//            .trailing(tabContainer.trailingAnchor, constant: 0),
+//            .top(separator.bottomAnchor, constant: 2),
+//            .bottom(tabContainer.safeAreaLayoutGuide.bottomAnchor, constant: 0)
+//        )
         
-        tabContainer.addSubview(itemStackView)
-        itemStackView.anchor(
-            .leading(tabContainer.leadingAnchor, constant: 0),
-            .trailing(tabContainer.trailingAnchor, constant: 0),
-            .top(separator.bottomAnchor, constant: 2),
-            .bottom(tabContainer.safeAreaLayoutGuide.bottomAnchor, constant: 0)
-        )
-        
-        viewControllers?.enumerated().forEach({ (i,v) in
-            guard let nav = v as? UINavigationController,
-                  let tabBarItem = nav.tabBarItem else {return}
-            
-            var config = UIButton.Configuration.plain()
-            config.image = UIImage(systemName: "play.fill")
-            config.imagePadding = 6
-            config.imagePlacement = .top
-            config.image = tabBarItem.image
-            config.titleAlignment = .automatic
-            config.buttonSize = .large
-            config.contentInsets = .init(top: 6, leading: 4, bottom: 6, trailing: 4)
-            
-            let attributedString = AttributedString(tabBarItem.title!,attributes: .init([
-                .font: UIFont.systemFont(ofSize: 10)
-            ]))
-            config.attributedTitle = attributedString
-            
-            if i == selectedIndex {
-                config.baseForegroundColor = .accentColor
-                config.baseBackgroundColor = .accentColor
-            } else {
-                config.baseForegroundColor = .secondaryLabel
-                config.baseBackgroundColor = .clear
-            }
-            
-            let button = UIButton(configuration: config)
-            button.tag = i
-            button.addTarget(self, action: #selector(onItemTapped(sender:)), for: .touchUpInside)
-            itemStackView.addArrangedSubview(button)
-        })
+//        viewControllers?.enumerated().forEach({ (i,v) in
+//            guard let nav = v as? UINavigationController,
+//                  let tabBarItem = nav.tabBarItem else {return}
+//
+//            let button = UIButton()
+//            button.setImage(tabBarItem.image, for: .normal)
+//
+//            if i == selectedIndex {
+//                button.tintColor = .accentColor
+//            } else {
+//                button.tintColor = .secondaryLabel
+//            }
+//
+//            button.tag = i
+//            button.addTarget(self, action: #selector(onItemTapped(sender:)), for: .touchUpInside)
+//            itemStackView.addArrangedSubview(button.withHeight(40))
+//        })
         
         NotificationCenter.default.addObserver(self, selector: #selector(musicPlay(notification:)), name: .playTrack, object: nil)
         
         NotificationCenter.default.addObserver(self, selector: #selector(musicPause(notification:)), name: .pauseTrack, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(musicStop(notification:)), name: .stopTrack, object: nil)
+        TracksLoader.shared.saveDefaultAsset()
 
     }
     
@@ -193,11 +181,9 @@ class MainTabVC: UITabBarController {
         self.itemStackView.arrangedSubviews.forEach { v in
             if let item = v as? UIButton {
                 if item.tag == selectedIndex {
-                    item.configuration?.baseForegroundColor = .accentColor
-                    item.configuration?.baseBackgroundColor = .accentColor
+                    item.tintColor = .accentColor
                 } else {
-                    item.configuration?.baseForegroundColor = .secondaryLabel
-                    item.configuration?.baseBackgroundColor = .clear
+                    item.tintColor = .secondaryLabel
                 }
             }
         }

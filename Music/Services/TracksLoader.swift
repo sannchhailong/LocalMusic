@@ -15,13 +15,35 @@ enum TracksLoadingResult<Success, Failure> {
 
 class TracksLoader {
     static let shared = TracksLoader()
+    private let fileManager = FileManager.default
+
+    func saveDefaultAsset() {
+        
+        do {
+            let documentDirectory = try fileManager.url(
+                for: .documentDirectory,
+                in: .userDomainMask,
+                appropriateFor: nil,
+                create: true
+            )
+            
+            if let url = Bundle.main.url(forResource: "jar_of_heart", withExtension: "mp3") {
+                let data = try Data(contentsOf: url)
+                try data.write(to: documentDirectory.appendingPathComponent("jar_of_heart.mp3"))
+            }
+            
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
+    
     
     func loadAllTracks(_ handler: @escaping ([Song]?,Error?) -> (Void)) {
         
         var songs = [Song]()
         
         do {
-            let documentDirectory = try FileManager.default.url(
+            let documentDirectory = try fileManager.url(
                 for: .documentDirectory,
                 in: .userDomainMask,
                 appropriateFor: nil,

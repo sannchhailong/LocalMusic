@@ -45,19 +45,34 @@ class TabbarView: UIView {
     }()
     
     let playButton: UIButton = {
-        var config = UIButton.Configuration.plain()
-        config.image = UIImage(systemName: "play.fill")
-        config.imagePadding = 8
-        config.setDefaultContentInsets()
-        config.baseBackgroundColor = .clear
-        let button = UIButton(configuration: config)
-        button.layer.cornerRadius = 30
-        button.clipsToBounds = true
-        button.tintColor = .white
-        button.setBackgroundColor(UIColor.white.withAlphaComponent(0.3), for: .selected)
-        button.setBackgroundColor(UIColor.white.withAlphaComponent(0.3), for: .highlighted)
+        if #available(iOS 15.0, *) {
+            var config = UIButton.Configuration.plain()
+            config.image = UIImage(systemName: "play.fill")
+            config.imagePadding = 8
+            config.setDefaultContentInsets()
+            config.baseBackgroundColor = .clear
+            let button = UIButton(configuration: config)
+            button.layer.cornerRadius = 30
+            button.clipsToBounds = true
+            button.tintColor = .white
+            button.setBackgroundColor(UIColor.white.withAlphaComponent(0.3), for: .selected)
+            button.setBackgroundColor(UIColor.white.withAlphaComponent(0.3), for: .highlighted)
 
-        return button
+            return button
+        } else {
+            // Fallback on earlier versions
+            
+            let button = UIButton()
+            button.setImage(UIImage(systemName: "play.fill"), for: .normal)
+            button.layer.cornerRadius = 30
+            button.clipsToBounds = true
+            button.tintColor = .white
+            button.setBackgroundColor(UIColor.white.withAlphaComponent(0.3), for: .selected)
+            button.setBackgroundColor(UIColor.white.withAlphaComponent(0.3), for: .highlighted)
+
+            return button
+        }
+        
     }()
     
     var children: [UIViewController] = []

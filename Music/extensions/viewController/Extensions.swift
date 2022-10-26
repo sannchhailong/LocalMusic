@@ -92,7 +92,7 @@ extension UINavigationController {
 
 extension UIViewController {
       
-      open func changeRootWindow(to viewController: UIViewController, duration: TimeInterval = 0.3, animation: UIView.AnimationOptions = .transitionCrossDissolve ) {
+    public func changeRootWindow(to viewController: UIViewController, duration: TimeInterval = 0.3, animation: UIView.AnimationOptions = .transitionCrossDissolve ) {
             let scene = UIApplication.shared.connectedScenes.first
             if let sd : SceneDelegate = (scene?.delegate as? SceneDelegate),
                let window = sd.window {
@@ -124,7 +124,7 @@ extension UIViewController {
       }
       
       
-      open var statusBarHeight: CGFloat { view.window?.windowScene?.statusBarManager?.statusBarFrame.height ?? 0 }
+    public var statusBarHeight: CGFloat { view.window?.windowScene?.statusBarManager?.statusBarFrame.height ?? 0 }
       
       
 //      func showLoading(_ progressView: ProgressView) {

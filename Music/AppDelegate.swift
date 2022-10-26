@@ -32,7 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print(error.localizedDescription)
         }
         UITabBar.appearance().tintColor = .accentColor
-        UITabBar.appearance().isHidden =  true
+//        UITabBar.appearance().isHidden =  true
         
         UIApplication.shared.beginReceivingRemoteControlEvents()
         

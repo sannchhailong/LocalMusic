@@ -147,7 +147,7 @@ class MainTabVC: UITabBarController {
         
         NotificationCenter.default.addObserver(self, selector: #selector(musicPause(notification:)), name: .pauseTrack, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(musicStop(notification:)), name: .stopTrack, object: nil)
-        TracksLoader.shared.saveDefaultAsset()
+        AssetsLoader.shared.saveDefaultAsset()
 
     }
     

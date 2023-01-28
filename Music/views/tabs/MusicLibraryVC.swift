@@ -100,7 +100,7 @@ class MusicLibraryVC: UICollectionViewController {
     
     func getMusicLibrary() {
         DispatchQueue.background(delay: 0) {
-            TracksLoader.shared.loadAllTracks({ (tracks,error) in
+            AssetsLoader.shared.loadAllTracks({ (tracks,error) in
                 if let tracks = tracks {
                     self.songs = tracks
                     

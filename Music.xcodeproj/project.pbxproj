@@ -53,7 +53,7 @@
 		F8BCC8A427DDA88800FDAF5F /* AlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BCC8A327DDA88800FDAF5F /* AlbumCell.swift */; };
 		F8C3BC5027E389F3007B4E49 /* TrackListingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C3BC4F27E389F3007B4E49 /* TrackListingVC.swift */; };
 		F8C3BC5227E38B0E007B4E49 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C3BC5127E38B0E007B4E49 /* Song.swift */; };
-		F8C3BC5727E38CD6007B4E49 /* TracksLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C3BC5627E38CD6007B4E49 /* TracksLoader.swift */; };
+		F8C3BC5727E38CD6007B4E49 /* AssetsLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C3BC5627E38CD6007B4E49 /* AssetsLoader.swift */; };
 		F8C3BC5927E39216007B4E49 /* TrackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C3BC5827E39216007B4E49 /* TrackCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -106,7 +106,7 @@
 		F8BCC8A327DDA88800FDAF5F /* AlbumCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCell.swift; sourceTree = "<group>"; };
 		F8C3BC4F27E389F3007B4E49 /* TrackListingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackListingVC.swift; sourceTree = "<group>"; };
 		F8C3BC5127E38B0E007B4E49 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
-		F8C3BC5627E38CD6007B4E49 /* TracksLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracksLoader.swift; sourceTree = "<group>"; };
+		F8C3BC5627E38CD6007B4E49 /* AssetsLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsLoader.swift; sourceTree = "<group>"; };
 		F8C3BC5827E39216007B4E49 /* TrackCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -292,7 +292,7 @@
 		F8C3BC5527E38C88007B4E49 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				F8C3BC5627E38CD6007B4E49 /* TracksLoader.swift */,
+				F8C3BC5627E38CD6007B4E49 /* AssetsLoader.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -376,7 +376,7 @@
 				F8BCC89427DD010D00FDAF5F /* Extensions.swift in Sources */,
 				F8252A0B27EB8296008DBA37 /* SearchTrackVC.swift in Sources */,
 				F8BCC88E27DD00F600FDAF5F /* UIView+Stacking.swift in Sources */,
-				F8C3BC5727E38CD6007B4E49 /* TracksLoader.swift in Sources */,
+				F8C3BC5727E38CD6007B4E49 /* AssetsLoader.swift in Sources */,
 				F8BCC87B27DD00E900FDAF5F /* String+subscript.swift in Sources */,
 				F8BCC87627DD00E000FDAF5F /* FormViewController.swift in Sources */,
 				F8BCC8A427DDA88800FDAF5F /* AlbumCell.swift in Sources */,

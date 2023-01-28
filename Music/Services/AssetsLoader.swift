@@ -1,5 +1,5 @@
 //
-//  TracksLoader.swift
+//  AssetsLoader.swift
 //  Music
 //
 //  Created by Sann Chhailong on 17/3/22.
@@ -13,8 +13,8 @@ enum TracksLoadingResult<Success, Failure> {
     case failure(Failure)
 }
 
-class TracksLoader {
-    static let shared = TracksLoader()
+class AssetsLoader {
+    static let shared = AssetsLoader()
     private let fileManager = FileManager.default
 
     func saveDefaultAsset() {

@@ -12,6 +12,6 @@ extension UIImage {
         return UIImage(named: "default_album")!
     }
     static var defaultAlbumImage2: UIImage {
-        return UIImage(named: "default_album2")!
+        return UIImage(named: "logo")!
     }
 }

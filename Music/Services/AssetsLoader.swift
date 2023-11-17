@@ -100,6 +100,17 @@ class AssetsLoader {
                             year: year)
                         
                         songs.append(song)
+                    } else {
+                        let song = Song(
+                            assetUrl: url.absoluteString,
+                            title: "unknown",
+                            album: "unknown",
+                            artwork: nil,
+                            artist: "unknown",
+                            genre: "unknown",
+                            year: "unknown")
+                        
+                        songs.append(song)
                     }
                 }
             }
@@ -125,7 +136,7 @@ extension URL {
         }
     }
 }
-
+//org.xiph.flac,com.microsoft.waveform-audio
 extension Encodable {
 
     /// Converting object to postable dictionary

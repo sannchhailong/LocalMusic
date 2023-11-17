@@ -76,7 +76,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     @objc func musicPlay(notification: NSNotification) {
         if let song = notification.object as? Song {
-            DispatchQueue.background(delay: 0) {
                 do {
                     
                     self.audioPlayer = try AVAudioPlayer(contentsOf: URL(string: song.assetUrl)!)
@@ -105,9 +104,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     // couldn't load file :(
                     print("Could not load file!!! \(error.localizedDescription)")
                 }
-            } completion: {
-                
-            }
+           
         } else {
             if !(audioPlayer?.isPlaying ?? false) {
                 audioPlayer?.play()

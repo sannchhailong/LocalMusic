@@ -77,8 +77,8 @@ class MainTabVC: UITabBarController {
             createNavController(viewController: ListenNowVC(), title: "Listen Now", imageName: "play.circle.fill"),
             createNavController(viewController: BrowseVC(), title: "Browse", imageName: "square.grid.2x2.fill"),
             createNavController(viewController: RadioVC(), title: "Radio", imageName: "dot.radiowaves.left.and.right"),
-            createNavController(viewController: MusicLibraryVC(), title: "Library", imageName: "music.note.list"),
-            createNavController(viewController: SearchTrackVC(), title: "Search", imageName: "magnifyingglass"),
+            createNavController(viewController: UIHostingController(rootView: MusicLibraryView()), title: "Library", imageName: "music.note.list"),
+            createNavController(viewController: MusicLibraryVC(), title: "Search", imageName: "magnifyingglass"),
         ]
         
         
@@ -162,7 +162,7 @@ class MainTabVC: UITabBarController {
                let image = UIImage(data: imageData) {
                 self.mediaControlView.artworkImage.image = image
             } else {
-                self.mediaControlView.artworkImage.image = .defaultAlbumImage2.withRenderingMode(.alwaysTemplate)
+                self.mediaControlView.artworkImage.image = .defaultAlbumImage2.withRenderingMode(.alwaysOriginal)
             }
         }
     }

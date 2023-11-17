@@ -99,7 +99,7 @@ class MusicLibraryVC: UICollectionViewController {
     }
     
     func getMusicLibrary() {
-        DispatchQueue.background(delay: 0) {
+        Task {
             AssetsLoader.shared.loadAllTracks({ (tracks,error) in
                 if let tracks = tracks {
                     self.songs = tracks
@@ -109,9 +109,6 @@ class MusicLibraryVC: UICollectionViewController {
                     print(error.localizedDescription)
                 }
             })
-        } completion: {
-            self.loading = false
-            self.collectionView.reloadData()
         }
     }
 }

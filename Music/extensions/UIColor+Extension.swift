@@ -34,3 +34,33 @@ extension UIColor {
     }
 
 }
+
+import SwiftUI
+extension Color {
+    static var accentColor: Color {
+          Color("accent")
+    }
+    static var endGradientColor: Color {
+        Color(uiColor: .endGradientColor)
+    }
+    
+    static var lightBlue: Color {
+        Color(uiColor: .lightBlue)
+    }
+    static var placeholder: Color {
+        Color(uiColor: .placeholder)
+    }
+    static public func rgb(red: CGFloat, green: CGFloat, blue: CGFloat) -> Color {
+        return Color(uiColor: .rgb(red: red, green: green, blue: blue))
+    }
+    
+    static var random: Color {
+        
+        let red = CGFloat.random(in: 0...1)
+        let green = CGFloat.random(in: 0...1)
+        let blue = CGFloat.random(in: 0...1)
+        return Color(red: red, green: green, blue: blue)
+
+    }
+
+}

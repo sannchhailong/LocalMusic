@@ -8,7 +8,8 @@
 import Foundation
 
 
-struct LibraryItem: Decodable, Encodable {
+struct LibraryItem: Identifiable, Decodable, Encodable {
+    let id = UUID().uuidString
     let icon: String
     let title: String
     private enum CodingKeys: String, CodingKey {

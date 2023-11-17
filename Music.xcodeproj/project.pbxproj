@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EDC717F72B071C3E0036AABF /* MusicLibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC717F62B071C3E0036AABF /* MusicLibraryView.swift */; };
+		EDC717F92B074CCF0036AABF /* SongListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC717F82B074CCF0036AABF /* SongListView.swift */; };
 		F818511627EE12B200947ABB /* TabbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F818511527EE12B200947ABB /* TabbarView.swift */; };
 		F818511827EE148300947ABB /* MainControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F818511727EE148300947ABB /* MainControlsView.swift */; };
 		F818511A27EE21D200947ABB /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F818511927EE21D200947ABB /* UIImage+Extension.swift */; };
@@ -58,6 +60,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EDC717F62B071C3E0036AABF /* MusicLibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicLibraryView.swift; sourceTree = "<group>"; };
+		EDC717F82B074CCF0036AABF /* SongListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongListView.swift; sourceTree = "<group>"; };
 		F818511527EE12B200947ABB /* TabbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarView.swift; sourceTree = "<group>"; };
 		F818511727EE148300947ABB /* MainControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainControlsView.swift; sourceTree = "<group>"; };
 		F818511927EE21D200947ABB /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
@@ -121,6 +125,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EDC717F42B071C190036AABF /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				EDC717F52B071C230036AABF /* Views */,
+			);
+			path = SwiftUI;
+			sourceTree = "<group>";
+		};
+		EDC717F52B071C230036AABF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EDC717F62B071C3E0036AABF /* MusicLibraryView.swift */,
+				EDC717F82B074CCF0036AABF /* SongListView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		F818511427EE129800947ABB /* components */ = {
 			isa = PBXGroup;
 			children = (
@@ -163,6 +184,7 @@
 		F87B893927C536EC00913D77 /* Music */ = {
 			isa = PBXGroup;
 			children = (
+				EDC717F42B071C190036AABF /* SwiftUI */,
 				F86F98932908DF4800302976 /* jar_of_heart.mp3 */,
 				F8C3BC5527E38C88007B4E49 /* Services */,
 				F8BCC89E27DD9F3E00FDAF5F /* models */,
@@ -327,7 +349,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1320;
-				LastUpgradeCheck = 1320;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					F87B893627C536EC00913D77 = {
 						CreatedOnToolsVersion = 13.2.1;
@@ -411,7 +433,9 @@
 				F8BCC89B27DD04CE00FDAF5F /* CollectionController.swift in Sources */,
 				F8C3BC5227E38B0E007B4E49 /* Song.swift in Sources */,
 				F82D325627E89EC9002F4BD8 /* LoadingFooterView.swift in Sources */,
+				EDC717F92B074CCF0036AABF /* SongListView.swift in Sources */,
 				F8BCC89027DD00F600FDAF5F /* AnchoredConstraints.swift in Sources */,
+				EDC717F72B071C3E0036AABF /* MusicLibraryView.swift in Sources */,
 				F8252A0927EB825A008DBA37 /* BrowseVC.swift in Sources */,
 				F8BCC8A227DDA7C100FDAF5F /* Album.swift in Sources */,
 				F8BCC86C27DD006400FDAF5F /* URL+Extension.swift in Sources */,
@@ -438,6 +462,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -471,6 +496,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -499,6 +525,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -532,6 +559,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -567,7 +595,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -601,7 +629,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -23,17 +23,17 @@ extension UIView {
     }
     
     @discardableResult
-    open func addColumn(_ views: UIView..., spacing: CGFloat = 0, alignment: UIStackView.Alignment = .fill, distribution: UIStackView.Distribution = .fill) -> UIStackView {
+    public func addColumn(_ views: UIView..., spacing: CGFloat = 0, alignment: UIStackView.Alignment = .fill, distribution: UIStackView.Distribution = .fill) -> UIStackView {
         return _stack(.vertical, views: views, spacing: spacing, alignment: alignment, distribution: distribution)
     }
     
     @discardableResult
-    open func addRow(_ views: UIView..., spacing: CGFloat = 0, alignment: UIStackView.Alignment = .fill, distribution: UIStackView.Distribution = .fill) -> UIStackView {
+    public func addRow(_ views: UIView..., spacing: CGFloat = 0, alignment: UIStackView.Alignment = .fill, distribution: UIStackView.Distribution = .fill) -> UIStackView {
         return _stack(.horizontal, views: views, spacing: spacing, alignment: alignment, distribution: distribution)
     }
     
     @discardableResult
-    open func withSize<T: UIView>(_ size: CGSize) -> T {
+    public func withSize<T: UIView>(_ size: CGSize) -> T {
         translatesAutoresizingMaskIntoConstraints = false
         widthAnchor.constraint(equalToConstant: size.width).isActive = true
         heightAnchor.constraint(equalToConstant: size.height).isActive = true
@@ -41,21 +41,21 @@ extension UIView {
     }
     
     @discardableResult
-    open func withHeight(_ height: CGFloat) -> UIView {
+    public func withHeight(_ height: CGFloat) -> UIView {
         translatesAutoresizingMaskIntoConstraints = false
         heightAnchor.constraint(equalToConstant: height).isActive = true
         return self
     }
     
     @discardableResult
-    open func withWidth(_ width: CGFloat) -> UIView {
+    public func withWidth(_ width: CGFloat) -> UIView {
         translatesAutoresizingMaskIntoConstraints = false
         widthAnchor.constraint(equalToConstant: width).isActive = true
         return self
     }
     
     @discardableResult
-    func withBorder<T: UIView>(width: CGFloat, color: UIColor) -> T {
+    public func withBorder<T: UIView>(width: CGFloat, color: UIColor) -> T {
         layer.borderWidth = width
         layer.borderColor = color.cgColor
         return self as! T

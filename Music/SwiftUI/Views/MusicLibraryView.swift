@@ -9,16 +9,17 @@ import SwiftUI
 
 struct MusicLibraryView: View {
     
-//    init() {
-//        let appearance = UINavigationBarAppearance()
-//        
-//        UINavigationBar.appearance().tintColor = .accent
-//        
-//        UINavigationBar.appearance().standardAppearance = appearance
-//        UINavigationBar.appearance().scrollEdgeAppearance = appearance
-//        UINavigationBar.appearance().compactAppearance = appearance
-//        UINavigationBar.appearance().compactScrollEdgeAppearance = appearance
-//    }
+    init() {
+        let appearance = UINavigationBarAppearance()
+        appearance.shadowColor = .clear
+        
+        UINavigationBar.appearance().tintColor = .accent
+        
+        UINavigationBar.appearance().standardAppearance = appearance
+        UINavigationBar.appearance().scrollEdgeAppearance = appearance
+        UINavigationBar.appearance().compactAppearance = appearance
+        UINavigationBar.appearance().compactScrollEdgeAppearance = appearance
+    }
     var loading = true
     @State var items: [LibraryItem] = [
         .init(icon: "music.note.list",              title: "Playlists"),
